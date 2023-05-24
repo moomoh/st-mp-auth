@@ -1,19 +1,19 @@
-# Streamlit Mult-page App with Authentication
+# Streamlit Multi-page App with Authentication
 Streamlit multipage with authentication using Google Oauth2.
 
 ## Introduction
-Streamlit is a very convenient framework for Data Scientists/ AI Engineers to quickly showcase their models to endusers, without spending too much time developing necessary parts for a full web app.
+Streamlit is a very convenient framework for Data Scientists/ AI Engineers to quickly showcase their models to end users, without spending too much time developing necessary parts for a full web app.
 
 Once you are ready with your model and feel the need to expose it to a larger audience, you can easily deploy Streamlit app that serves your model to a platform like HuggingFace, Streamlit, or Heroku etc. Authentication becomes a necessary feature if you don't want your app is exposed to any anonymous user in the Web, which may lead to uncontrollable uses of your computing resources or billale API (which means costing you money, a lot of it).
 
-This repo based on the good intruction that I found in this awesome blog post [Implementing Google OAuth in Streamlt](https://towardsdatascience.com/implementing-google-oauth-in-streamlit-bb7c3be0082c). A few modifications have been made as follows:
+This repo based on the instruction I found in this awesome blog post [Implementing Google OAuth in Streamlt](https://towardsdatascience.com/implementing-google-oauth-in-streamlit-bb7c3be0082c). A few modifications have been made as follows:
 + Use Streamlit built-in SessionState, that is available at the creation time of this repo (instead of the custom-build class as in the original instruction).
 + Introduce Multi-page structure to the app
 + Use some features from streamlit-extras to facilitate the navivation within app
 
 This structure separates all the Authentication logics to pages like Account and Logout, then allows logics for the actual app be implemented cleanly in the Main.py page.
 
-Currently, the app only support Google Authentication as instructed by the original post, but you can easily implement other authentication mechanism such as Azure, or email/password, etc. to suit yourt needs.
+Currently, the app only support Google Authentication as instructed by the original post, but you can also implement other authentication mechanism such as Azure, or email/password, etc. to suit yourt needs.
 
 
 ## Setups
