@@ -5,6 +5,9 @@ import time
 from streamlit_extras.switch_page_button import switch_page
 from streamlit_card import card
 from httpx_oauth.clients.google import GoogleOAuth2
+from dotenv import load_dotenv
+
+load_dotenv('credits.env')
 
 
 async def write_authorization_url(client, redirect_uri):
