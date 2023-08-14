@@ -55,7 +55,7 @@ else:
     client_secret =""
     redirect_uri ="https://st-mp-go.streamlit.app/Main"
 
-    client = GoogleOAuth2(client_id)
+    client = GoogleOAuth2(client_id,client_secret)
     authorization_url = asyncio.run(
         write_authorization_url(client=client, redirect_uri=redirect_uri)
     )
