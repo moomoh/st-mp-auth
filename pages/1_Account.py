@@ -41,9 +41,15 @@ def main(user_id, user_email):
 if "token" in st.session_state:
     main(user_id=st.session_state.user_id, user_email=st.session_state.user_email)
 else:
-    client_id = os.environ["GOOGLE_CLIENT_ID"]
-    client_secret = os.environ["GOOGLE_CLIENT_SECRET"]
-    redirect_uri = os.environ["REDIRECT_URI"]
+   # os.getenv('OPENAI_API_KEY')
+    #environ
+    #environ
+    #environ 
+    #]
+    #[
+    client_id = os.getenv("GOOGLE_CLIENT_ID")
+    client_secret = os.getenv("GOOGLE_CLIENT_SECRET")
+    redirect_uri = os.getenv("REDIRECT_URI")
 
     client = GoogleOAuth2(client_id, client_secret)
     authorization_url = asyncio.run(
