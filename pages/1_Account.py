@@ -7,7 +7,6 @@ from streamlit_card import card
 from httpx_oauth.clients.google import GoogleOAuth2
 from dotenv import load_dotenv
 
-load_dotenv('credits.env')
 
 
 async def write_authorization_url(client, redirect_uri):
@@ -38,6 +37,7 @@ def main(user_id, user_email):
         switch_page("Home")
 
 
+
 if "token" in st.session_state:
     main(user_id=st.session_state.user_id, user_email=st.session_state.user_email)
 else:
@@ -47,6 +47,7 @@ else:
     #environ 
     #]
     #[
+    load_dotenv('credits.env')
     client_id = os.getenv("GOOGLE_CLIENT_ID")
     client_secret = os.getenv("GOOGLE_CLIENT_SECRET")
     redirect_uri = os.getenv("REDIRECT_URI")
