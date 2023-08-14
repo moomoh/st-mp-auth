@@ -52,7 +52,7 @@ else:
   #  client_secret = os.getenv("GOOGLE_CLIENT_SECRET")
   #  redirect_uri = os.getenv("REDIRECT_URI")
     client_id ="834004053534-upeam4huj3c5ao5irm2nplhkkpdq55g3.apps.googleusercontent.com"
-    client_secret =""
+    client_secret ="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"
     redirect_uri ="https://st-mp-go.streamlit.app/Main"
 
     client = GoogleOAuth2(client_id,client_secret)
