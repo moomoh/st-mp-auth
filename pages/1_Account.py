@@ -5,7 +5,7 @@ import time
 from streamlit_extras.switch_page_button import switch_page
 from streamlit_card import card
 from httpx_oauth.clients.google import GoogleOAuth2
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
 
 
@@ -47,10 +47,13 @@ else:
     #environ 
     #]
     #[
-    load_dotenv('credits.env')
-    client_id = os.getenv("GOOGLE_CLIENT_ID")
-    client_secret = os.getenv("GOOGLE_CLIENT_SECRET")
-    redirect_uri = os.getenv("REDIRECT_URI")
+  #  load_dotenv('credits.env')
+  #  client_id = os.getenv("GOOGLE_CLIENT_ID")
+  #  client_secret = os.getenv("GOOGLE_CLIENT_SECRET")
+  #  redirect_uri = os.getenv("REDIRECT_URI")
+    client_id ="834004053534-upeam4huj3c5ao5irm2nplhkkpdq55g3.apps.googleusercontent.com"
+    client_secret =""
+    redirect_uri ="https://st-mp-go.streamlit.app/Main"
 
     client = GoogleOAuth2(client_id, client_secret)
     authorization_url = asyncio.run(
